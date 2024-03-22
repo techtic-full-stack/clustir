@@ -12,13 +12,13 @@ const initialValues = {
   email: "",
   password: "",
 };
-function CreateAccount() {
+const CreateAccount = () => {
   const [submitting, setSubmitting] = useState(false);
   const [loader, setLoader] = useState(false);
   const router = useRouter();
   const notificationContext = useNotification();
   const handleNotifications: any = notificationContext?.handleNotifications;
- 
+
 
   const onSubmit = async (values: any) => {
     try {
@@ -81,11 +81,10 @@ function CreateAccount() {
                       type="email"
                       name="email"
                       as={Input}
-                      className={`h-12 px-4 py-2 rounded-md border w-full ${
-                        touched.email && errors.email
+                      className={`h-12 px-4 py-2 rounded-md border w-full ${touched.email && errors.email
                           ? "border-red-500"
                           : "border-gray-300"
-                      } focus:outline-none focus:border-blue-500`}
+                        } focus:outline-none focus:border-blue-500`}
                     />
                     <ErrorMessage
                       name="email"
@@ -103,11 +102,10 @@ function CreateAccount() {
                       type="password"
                       name="password"
                       as={Input.Password}
-                      className={`px-3 !py-0 rounded-md border w-full ${
-                        touched.password && errors.password
+                      className={`px-3 !py-0 rounded-md border w-full ${touched.password && errors.password
                           ? "border-red-500"
                           : "border-gray-300"
-                      } focus:outline-none focus:border-blue-500`}
+                        } focus:outline-none focus:border-blue-500`}
                     />
                     <ErrorMessage
                       name="password"

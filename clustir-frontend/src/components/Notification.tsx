@@ -1,6 +1,5 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 import { notification, notification as antdNotification, Typography } from 'antd';
-// import Error from "../../pages/Error";
 
 // Define the type for the notification context
 type NotificationContextType = {
