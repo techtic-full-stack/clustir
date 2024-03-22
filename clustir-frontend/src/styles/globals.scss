@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@font-face {
+  font-family: 'Brother1816-Bold';
+  src: url('./fonts/Brother1816-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brother1816-Regular';
+  src: url('./fonts/Brother1816-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    font-family: "Brother1816-Regular";
+}
+
+.inner-card{
+  background-color: #FFFFFF !important;
+  font-size:18px;
+
+}
+.otp-input {
+  border: none;
+  border-bottom: 2px solid #929292; /* Bottom border style */
+  margin: 0 8px; /* Adjust margin as needed */
+  text-align: center;
+  font-size: 25px; /* Adjust font size as needed */
+  color: black;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color:#4C45EE; 
+  background-color: #FBFBFF;/* Border color when input is focused */
+}
+.verify-input >div >input{
+  width: 45px !important;
+  color: #4C45EE !important;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.ant-input {
+  height: 50px !important;
+  border-color:rgba(0, 0, 0, 0.45)
+}
+.label {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+
+
+//Loader css
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56vh;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #4c45ee; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input{
+  color: #000000 !important;
+}
